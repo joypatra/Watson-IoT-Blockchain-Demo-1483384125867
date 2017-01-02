@@ -1,0 +1,14 @@
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: Watson IoT Blockchain Demo
+  host: watson-iot-blockchain-demo
+  disk_quota: 1024M
+  services:
+  - Watson IoT Blockchain Demo-driver-behavior-service
+  - Watson-IoT-Blockchain-Demo-blockchain-service
+  - Watson IoT Blockchain Demo-cloudantNoSQLDB
+  - Watson IoT Blockchain Demo-iotf-service
+  - Watson-IoT-Blockchain-Demo-context-mapping-service

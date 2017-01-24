@@ -40,7 +40,7 @@ var samples = `
             "latitude": 123.456,
             "longitude": 123.456
         },
-        "timestamp": "2017-01-11T13:01:07.246222833Z",
+        "timestamp": "2017-01-24T05:47:43.887396851-06:00",
         "vehicleID": {
             "driverID": [
                 "NO TYPE PROPERTY"
@@ -117,7 +117,7 @@ var samples = `
             "latitude": 123.456,
             "longitude": 123.456
         },
-        "timestamp": "2017-01-11T13:01:07.246352521Z",
+        "timestamp": "2017-01-24T05:47:43.887488122-06:00",
         "txntimestamp": "Transaction timestamp matching that in the blockchain.",
         "txnuuid": "Transaction UUID matching that in the blockchain.",
         "vehicleID": {

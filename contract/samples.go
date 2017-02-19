@@ -23,24 +23,35 @@ var samples = `
                 "lastIncrementTime": "carpe noctem"
             },
             "lastTrip": {
-                "behaviorArray": [
+                "ctx_sub_trips": [
                     "NO TYPE PROPERTY"
                 ],
-                "licenceNumber": "carpe noctem",
-                "startLatitude": "carpe noctem",
-                "startLongitude": "carpe noctem",
-                "startTime": "carpe noctem",
-                "stopLatitude": "carpe noctem",
-                "stopLongitude": "carpe noctem",
-                "stopTime": "carpe noctem",
-                "tripID": "carpe noctem"
+                "driver_id": "carpe noctem",
+                "end_altitude": 123.456,
+                "end_latitude": 123.456,
+                "end_longitude": 123.456,
+                "end_time": 123.456,
+                "generated_time": 123.456,
+                "id": {
+                    "tenant_id": "carpe noctem",
+                    "trip_uuid": "carpe noctem"
+                },
+                "mo_id": "carpe noctem",
+                "start_altitude": 123.456,
+                "start_latitude": 123.456,
+                "start_longitude": 123.456,
+                "start_time": 123.456,
+                "trip_features": [
+                    "NO TYPE PROPERTY"
+                ],
+                "trip_id": "carpe noctem"
             }
         },
         "lastKnownLocation": {
             "latitude": 123.456,
             "longitude": 123.456
         },
-        "timestamp": "2017-01-26T03:59:51.224396994-06:00",
+        "timestamp": "2017-02-19T20:08:36.789786674Z",
         "vehicleID": {
             "driverID": [
                 "NO TYPE PROPERTY"
@@ -93,17 +104,28 @@ var samples = `
                 "lastIncrementTime": "carpe noctem"
             },
             "lastTrip": {
-                "behaviorArray": [
+                "ctx_sub_trips": [
                     "NO TYPE PROPERTY"
                 ],
-                "licenceNumber": "carpe noctem",
-                "startLatitude": "carpe noctem",
-                "startLongitude": "carpe noctem",
-                "startTime": "carpe noctem",
-                "stopLatitude": "carpe noctem",
-                "stopLongitude": "carpe noctem",
-                "stopTime": "carpe noctem",
-                "tripID": "carpe noctem"
+                "driver_id": "carpe noctem",
+                "end_altitude": 123.456,
+                "end_latitude": 123.456,
+                "end_longitude": 123.456,
+                "end_time": 123.456,
+                "generated_time": 123.456,
+                "id": {
+                    "tenant_id": "carpe noctem",
+                    "trip_uuid": "carpe noctem"
+                },
+                "mo_id": "carpe noctem",
+                "start_altitude": 123.456,
+                "start_latitude": 123.456,
+                "start_longitude": 123.456,
+                "start_time": 123.456,
+                "trip_features": [
+                    "NO TYPE PROPERTY"
+                ],
+                "trip_id": "carpe noctem"
             }
         },
         "lastEvent": {
@@ -117,7 +139,7 @@ var samples = `
             "latitude": 123.456,
             "longitude": 123.456
         },
-        "timestamp": "2017-01-26T03:59:51.224491867-06:00",
+        "timestamp": "2017-02-19T20:08:36.790030416Z",
         "txntimestamp": "Transaction timestamp matching that in the blockchain.",
         "txnuuid": "Transaction UUID matching that in the blockchain.",
         "vehicleID": {

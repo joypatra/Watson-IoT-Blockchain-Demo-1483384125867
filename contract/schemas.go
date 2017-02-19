@@ -48,67 +48,209 @@ var schemas = `
                                     },
                                     "lastTrip": {
                                         "properties": {
-                                            "behaviorArray": {
+                                            "ctx_sub_trips": {
                                                 "items": {
-                                                    "behaviorName": {
-                                                        "type": "string"
+                                                    "avg_speed": {
+                                                        "type": "number"
                                                     },
-                                                    "contextFeatures": {
+                                                    "ctx_features": {
                                                         "items": {
-                                                            "category": {
+                                                            "behavior_id": {
                                                                 "type": "string"
                                                             },
-                                                            "name": {
+                                                            "context_category": {
+                                                                "type": "string"
+                                                            },
+                                                            "context_category_id": {
+                                                                "type": "number"
+                                                            },
+                                                            "context_id": {
+                                                                "type": "number"
+                                                            },
+                                                            "context_name": {
+                                                                "type": "string"
+                                                            },
+                                                            "id": {
+                                                                "type": "number"
+                                                            },
+                                                            "sub_trip_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "tenant_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "trip_id": {
                                                                 "type": "string"
                                                             }
                                                         },
                                                         "minItems": 0,
                                                         "type": "array"
                                                     },
-                                                    "startLatitude": {
+                                                    "driver_id": {
                                                         "type": "string"
                                                     },
-                                                    "startLongitude": {
+                                                    "driving_behavior_details": {
+                                                        "items": {
+                                                            "behavior_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "behavior_name": {
+                                                                "type": "string"
+                                                            },
+                                                            "driver_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "end_latitude": {
+                                                                "type": "number"
+                                                            },
+                                                            "end_longitude": {
+                                                                "type": "number"
+                                                            },
+                                                            "end_time": {
+                                                                "type": "number"
+                                                            },
+                                                            "generated_time": {
+                                                                "type": "number"
+                                                            },
+                                                            "id": {
+                                                                "type": "number"
+                                                            },
+                                                            "mo_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "start_latitude": {
+                                                                "type": "number"
+                                                            },
+                                                            "start_longitude": {
+                                                                "type": "number"
+                                                            },
+                                                            "start_time": {
+                                                                "type": "number"
+                                                            },
+                                                            "sub_trip_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "tenant_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "trip_id": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "minItems": 0,
+                                                        "type": "array"
+                                                    },
+                                                    "end_latitude": {
+                                                        "type": "number"
+                                                    },
+                                                    "end_longitude": {
+                                                        "type": "number"
+                                                    },
+                                                    "end_time": {
+                                                        "type": "number"
+                                                    },
+                                                    "id": {
+                                                        "properties": {
+                                                            "sub_trip_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "tenant_id": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "length": {
+                                                        "type": "number"
+                                                    },
+                                                    "mo_id": {
                                                         "type": "string"
                                                     },
-                                                    "startTime": {
+                                                    "start_latitude": {
+                                                        "type": "number"
+                                                    },
+                                                    "start_longitude": {
+                                                        "type": "number"
+                                                    },
+                                                    "start_time": {
+                                                        "type": "number"
+                                                    },
+                                                    "trip_id": {
                                                         "type": "string"
                                                     },
-                                                    "stopLatitude": {
-                                                        "type": "string"
-                                                    },
-                                                    "stopLongitude": {
-                                                        "type": "string"
-                                                    },
-                                                    "stopTime": {
+                                                    "trip_uuid": {
                                                         "type": "string"
                                                     }
                                                 },
                                                 "minItems": 0,
                                                 "type": "array"
                                             },
-                                            "licenceNumber": {
+                                            "driver_id": {
                                                 "type": "string"
                                             },
-                                            "startLatitude": {
+                                            "end_altitude": {
+                                                "type": "number"
+                                            },
+                                            "end_latitude": {
+                                                "type": "number"
+                                            },
+                                            "end_longitude": {
+                                                "type": "number"
+                                            },
+                                            "end_time": {
+                                                "type": "number"
+                                            },
+                                            "generated_time": {
+                                                "type": "number"
+                                            },
+                                            "id": {
+                                                "properties": {
+                                                    "tenant_id": {
+                                                        "type": "string"
+                                                    },
+                                                    "trip_uuid": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "mo_id": {
                                                 "type": "string"
                                             },
-                                            "startLongitude": {
-                                                "type": "string"
+                                            "start_altitude": {
+                                                "type": "number"
                                             },
-                                            "startTime": {
-                                                "type": "string"
+                                            "start_latitude": {
+                                                "type": "number"
                                             },
-                                            "stopLatitude": {
-                                                "type": "string"
+                                            "start_longitude": {
+                                                "type": "number"
                                             },
-                                            "stopLongitude": {
-                                                "type": "string"
+                                            "start_time": {
+                                                "type": "number"
                                             },
-                                            "stopTime": {
-                                                "type": "string"
+                                            "trip_features": {
+                                                "items": {
+                                                    "feature_name": {
+                                                        "type": "string"
+                                                    },
+                                                    "feature_value": {
+                                                        "type": "string"
+                                                    },
+                                                    "id": {
+                                                        "type": "number"
+                                                    },
+                                                    "tenant_id": {
+                                                        "type": "string"
+                                                    },
+                                                    "trip_uuid": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "minItems": 0,
+                                                "type": "array"
                                             },
-                                            "tripID": {
+                                            "trip_id": {
                                                 "type": "string"
                                             }
                                         },
@@ -428,67 +570,209 @@ var schemas = `
                                     },
                                     "lastTrip": {
                                         "properties": {
-                                            "behaviorArray": {
+                                            "ctx_sub_trips": {
                                                 "items": {
-                                                    "behaviorName": {
-                                                        "type": "string"
+                                                    "avg_speed": {
+                                                        "type": "number"
                                                     },
-                                                    "contextFeatures": {
+                                                    "ctx_features": {
                                                         "items": {
-                                                            "category": {
+                                                            "behavior_id": {
                                                                 "type": "string"
                                                             },
-                                                            "name": {
+                                                            "context_category": {
+                                                                "type": "string"
+                                                            },
+                                                            "context_category_id": {
+                                                                "type": "number"
+                                                            },
+                                                            "context_id": {
+                                                                "type": "number"
+                                                            },
+                                                            "context_name": {
+                                                                "type": "string"
+                                                            },
+                                                            "id": {
+                                                                "type": "number"
+                                                            },
+                                                            "sub_trip_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "tenant_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "trip_id": {
                                                                 "type": "string"
                                                             }
                                                         },
                                                         "minItems": 0,
                                                         "type": "array"
                                                     },
-                                                    "startLatitude": {
+                                                    "driver_id": {
                                                         "type": "string"
                                                     },
-                                                    "startLongitude": {
+                                                    "driving_behavior_details": {
+                                                        "items": {
+                                                            "behavior_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "behavior_name": {
+                                                                "type": "string"
+                                                            },
+                                                            "driver_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "end_latitude": {
+                                                                "type": "number"
+                                                            },
+                                                            "end_longitude": {
+                                                                "type": "number"
+                                                            },
+                                                            "end_time": {
+                                                                "type": "number"
+                                                            },
+                                                            "generated_time": {
+                                                                "type": "number"
+                                                            },
+                                                            "id": {
+                                                                "type": "number"
+                                                            },
+                                                            "mo_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "start_latitude": {
+                                                                "type": "number"
+                                                            },
+                                                            "start_longitude": {
+                                                                "type": "number"
+                                                            },
+                                                            "start_time": {
+                                                                "type": "number"
+                                                            },
+                                                            "sub_trip_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "tenant_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "trip_id": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "minItems": 0,
+                                                        "type": "array"
+                                                    },
+                                                    "end_latitude": {
+                                                        "type": "number"
+                                                    },
+                                                    "end_longitude": {
+                                                        "type": "number"
+                                                    },
+                                                    "end_time": {
+                                                        "type": "number"
+                                                    },
+                                                    "id": {
+                                                        "properties": {
+                                                            "sub_trip_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "tenant_id": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "length": {
+                                                        "type": "number"
+                                                    },
+                                                    "mo_id": {
                                                         "type": "string"
                                                     },
-                                                    "startTime": {
+                                                    "start_latitude": {
+                                                        "type": "number"
+                                                    },
+                                                    "start_longitude": {
+                                                        "type": "number"
+                                                    },
+                                                    "start_time": {
+                                                        "type": "number"
+                                                    },
+                                                    "trip_id": {
                                                         "type": "string"
                                                     },
-                                                    "stopLatitude": {
-                                                        "type": "string"
-                                                    },
-                                                    "stopLongitude": {
-                                                        "type": "string"
-                                                    },
-                                                    "stopTime": {
+                                                    "trip_uuid": {
                                                         "type": "string"
                                                     }
                                                 },
                                                 "minItems": 0,
                                                 "type": "array"
                                             },
-                                            "licenceNumber": {
+                                            "driver_id": {
                                                 "type": "string"
                                             },
-                                            "startLatitude": {
+                                            "end_altitude": {
+                                                "type": "number"
+                                            },
+                                            "end_latitude": {
+                                                "type": "number"
+                                            },
+                                            "end_longitude": {
+                                                "type": "number"
+                                            },
+                                            "end_time": {
+                                                "type": "number"
+                                            },
+                                            "generated_time": {
+                                                "type": "number"
+                                            },
+                                            "id": {
+                                                "properties": {
+                                                    "tenant_id": {
+                                                        "type": "string"
+                                                    },
+                                                    "trip_uuid": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "mo_id": {
                                                 "type": "string"
                                             },
-                                            "startLongitude": {
-                                                "type": "string"
+                                            "start_altitude": {
+                                                "type": "number"
                                             },
-                                            "startTime": {
-                                                "type": "string"
+                                            "start_latitude": {
+                                                "type": "number"
                                             },
-                                            "stopLatitude": {
-                                                "type": "string"
+                                            "start_longitude": {
+                                                "type": "number"
                                             },
-                                            "stopLongitude": {
-                                                "type": "string"
+                                            "start_time": {
+                                                "type": "number"
                                             },
-                                            "stopTime": {
-                                                "type": "string"
+                                            "trip_features": {
+                                                "items": {
+                                                    "feature_name": {
+                                                        "type": "string"
+                                                    },
+                                                    "feature_value": {
+                                                        "type": "string"
+                                                    },
+                                                    "id": {
+                                                        "type": "number"
+                                                    },
+                                                    "tenant_id": {
+                                                        "type": "string"
+                                                    },
+                                                    "trip_uuid": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "minItems": 0,
+                                                "type": "array"
                                             },
-                                            "tripID": {
+                                            "trip_id": {
                                                 "type": "string"
                                             }
                                         },
@@ -702,67 +986,209 @@ var schemas = `
                                 },
                                 "lastTrip": {
                                     "properties": {
-                                        "behaviorArray": {
+                                        "ctx_sub_trips": {
                                             "items": {
-                                                "behaviorName": {
-                                                    "type": "string"
+                                                "avg_speed": {
+                                                    "type": "number"
                                                 },
-                                                "contextFeatures": {
+                                                "ctx_features": {
                                                     "items": {
-                                                        "category": {
+                                                        "behavior_id": {
                                                             "type": "string"
                                                         },
-                                                        "name": {
+                                                        "context_category": {
+                                                            "type": "string"
+                                                        },
+                                                        "context_category_id": {
+                                                            "type": "number"
+                                                        },
+                                                        "context_id": {
+                                                            "type": "number"
+                                                        },
+                                                        "context_name": {
+                                                            "type": "string"
+                                                        },
+                                                        "id": {
+                                                            "type": "number"
+                                                        },
+                                                        "sub_trip_id": {
+                                                            "type": "string"
+                                                        },
+                                                        "tenant_id": {
+                                                            "type": "string"
+                                                        },
+                                                        "trip_id": {
                                                             "type": "string"
                                                         }
                                                     },
                                                     "minItems": 0,
                                                     "type": "array"
                                                 },
-                                                "startLatitude": {
+                                                "driver_id": {
                                                     "type": "string"
                                                 },
-                                                "startLongitude": {
+                                                "driving_behavior_details": {
+                                                    "items": {
+                                                        "behavior_id": {
+                                                            "type": "string"
+                                                        },
+                                                        "behavior_name": {
+                                                            "type": "string"
+                                                        },
+                                                        "driver_id": {
+                                                            "type": "string"
+                                                        },
+                                                        "end_latitude": {
+                                                            "type": "number"
+                                                        },
+                                                        "end_longitude": {
+                                                            "type": "number"
+                                                        },
+                                                        "end_time": {
+                                                            "type": "number"
+                                                        },
+                                                        "generated_time": {
+                                                            "type": "number"
+                                                        },
+                                                        "id": {
+                                                            "type": "number"
+                                                        },
+                                                        "mo_id": {
+                                                            "type": "string"
+                                                        },
+                                                        "start_latitude": {
+                                                            "type": "number"
+                                                        },
+                                                        "start_longitude": {
+                                                            "type": "number"
+                                                        },
+                                                        "start_time": {
+                                                            "type": "number"
+                                                        },
+                                                        "sub_trip_id": {
+                                                            "type": "string"
+                                                        },
+                                                        "tenant_id": {
+                                                            "type": "string"
+                                                        },
+                                                        "trip_id": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "minItems": 0,
+                                                    "type": "array"
+                                                },
+                                                "end_latitude": {
+                                                    "type": "number"
+                                                },
+                                                "end_longitude": {
+                                                    "type": "number"
+                                                },
+                                                "end_time": {
+                                                    "type": "number"
+                                                },
+                                                "id": {
+                                                    "properties": {
+                                                        "sub_trip_id": {
+                                                            "type": "string"
+                                                        },
+                                                        "tenant_id": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "length": {
+                                                    "type": "number"
+                                                },
+                                                "mo_id": {
                                                     "type": "string"
                                                 },
-                                                "startTime": {
+                                                "start_latitude": {
+                                                    "type": "number"
+                                                },
+                                                "start_longitude": {
+                                                    "type": "number"
+                                                },
+                                                "start_time": {
+                                                    "type": "number"
+                                                },
+                                                "trip_id": {
                                                     "type": "string"
                                                 },
-                                                "stopLatitude": {
-                                                    "type": "string"
-                                                },
-                                                "stopLongitude": {
-                                                    "type": "string"
-                                                },
-                                                "stopTime": {
+                                                "trip_uuid": {
                                                     "type": "string"
                                                 }
                                             },
                                             "minItems": 0,
                                             "type": "array"
                                         },
-                                        "licenceNumber": {
+                                        "driver_id": {
                                             "type": "string"
                                         },
-                                        "startLatitude": {
+                                        "end_altitude": {
+                                            "type": "number"
+                                        },
+                                        "end_latitude": {
+                                            "type": "number"
+                                        },
+                                        "end_longitude": {
+                                            "type": "number"
+                                        },
+                                        "end_time": {
+                                            "type": "number"
+                                        },
+                                        "generated_time": {
+                                            "type": "number"
+                                        },
+                                        "id": {
+                                            "properties": {
+                                                "tenant_id": {
+                                                    "type": "string"
+                                                },
+                                                "trip_uuid": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "mo_id": {
                                             "type": "string"
                                         },
-                                        "startLongitude": {
-                                            "type": "string"
+                                        "start_altitude": {
+                                            "type": "number"
                                         },
-                                        "startTime": {
-                                            "type": "string"
+                                        "start_latitude": {
+                                            "type": "number"
                                         },
-                                        "stopLatitude": {
-                                            "type": "string"
+                                        "start_longitude": {
+                                            "type": "number"
                                         },
-                                        "stopLongitude": {
-                                            "type": "string"
+                                        "start_time": {
+                                            "type": "number"
                                         },
-                                        "stopTime": {
-                                            "type": "string"
+                                        "trip_features": {
+                                            "items": {
+                                                "feature_name": {
+                                                    "type": "string"
+                                                },
+                                                "feature_value": {
+                                                    "type": "string"
+                                                },
+                                                "id": {
+                                                    "type": "number"
+                                                },
+                                                "tenant_id": {
+                                                    "type": "string"
+                                                },
+                                                "trip_uuid": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "minItems": 0,
+                                            "type": "array"
                                         },
-                                        "tripID": {
+                                        "trip_id": {
                                             "type": "string"
                                         }
                                     },
@@ -981,67 +1407,209 @@ var schemas = `
                                     },
                                     "lastTrip": {
                                         "properties": {
-                                            "behaviorArray": {
+                                            "ctx_sub_trips": {
                                                 "items": {
-                                                    "behaviorName": {
-                                                        "type": "string"
+                                                    "avg_speed": {
+                                                        "type": "number"
                                                     },
-                                                    "contextFeatures": {
+                                                    "ctx_features": {
                                                         "items": {
-                                                            "category": {
+                                                            "behavior_id": {
                                                                 "type": "string"
                                                             },
-                                                            "name": {
+                                                            "context_category": {
+                                                                "type": "string"
+                                                            },
+                                                            "context_category_id": {
+                                                                "type": "number"
+                                                            },
+                                                            "context_id": {
+                                                                "type": "number"
+                                                            },
+                                                            "context_name": {
+                                                                "type": "string"
+                                                            },
+                                                            "id": {
+                                                                "type": "number"
+                                                            },
+                                                            "sub_trip_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "tenant_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "trip_id": {
                                                                 "type": "string"
                                                             }
                                                         },
                                                         "minItems": 0,
                                                         "type": "array"
                                                     },
-                                                    "startLatitude": {
+                                                    "driver_id": {
                                                         "type": "string"
                                                     },
-                                                    "startLongitude": {
+                                                    "driving_behavior_details": {
+                                                        "items": {
+                                                            "behavior_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "behavior_name": {
+                                                                "type": "string"
+                                                            },
+                                                            "driver_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "end_latitude": {
+                                                                "type": "number"
+                                                            },
+                                                            "end_longitude": {
+                                                                "type": "number"
+                                                            },
+                                                            "end_time": {
+                                                                "type": "number"
+                                                            },
+                                                            "generated_time": {
+                                                                "type": "number"
+                                                            },
+                                                            "id": {
+                                                                "type": "number"
+                                                            },
+                                                            "mo_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "start_latitude": {
+                                                                "type": "number"
+                                                            },
+                                                            "start_longitude": {
+                                                                "type": "number"
+                                                            },
+                                                            "start_time": {
+                                                                "type": "number"
+                                                            },
+                                                            "sub_trip_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "tenant_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "trip_id": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "minItems": 0,
+                                                        "type": "array"
+                                                    },
+                                                    "end_latitude": {
+                                                        "type": "number"
+                                                    },
+                                                    "end_longitude": {
+                                                        "type": "number"
+                                                    },
+                                                    "end_time": {
+                                                        "type": "number"
+                                                    },
+                                                    "id": {
+                                                        "properties": {
+                                                            "sub_trip_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "tenant_id": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "length": {
+                                                        "type": "number"
+                                                    },
+                                                    "mo_id": {
                                                         "type": "string"
                                                     },
-                                                    "startTime": {
+                                                    "start_latitude": {
+                                                        "type": "number"
+                                                    },
+                                                    "start_longitude": {
+                                                        "type": "number"
+                                                    },
+                                                    "start_time": {
+                                                        "type": "number"
+                                                    },
+                                                    "trip_id": {
                                                         "type": "string"
                                                     },
-                                                    "stopLatitude": {
-                                                        "type": "string"
-                                                    },
-                                                    "stopLongitude": {
-                                                        "type": "string"
-                                                    },
-                                                    "stopTime": {
+                                                    "trip_uuid": {
                                                         "type": "string"
                                                     }
                                                 },
                                                 "minItems": 0,
                                                 "type": "array"
                                             },
-                                            "licenceNumber": {
+                                            "driver_id": {
                                                 "type": "string"
                                             },
-                                            "startLatitude": {
+                                            "end_altitude": {
+                                                "type": "number"
+                                            },
+                                            "end_latitude": {
+                                                "type": "number"
+                                            },
+                                            "end_longitude": {
+                                                "type": "number"
+                                            },
+                                            "end_time": {
+                                                "type": "number"
+                                            },
+                                            "generated_time": {
+                                                "type": "number"
+                                            },
+                                            "id": {
+                                                "properties": {
+                                                    "tenant_id": {
+                                                        "type": "string"
+                                                    },
+                                                    "trip_uuid": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "mo_id": {
                                                 "type": "string"
                                             },
-                                            "startLongitude": {
-                                                "type": "string"
+                                            "start_altitude": {
+                                                "type": "number"
                                             },
-                                            "startTime": {
-                                                "type": "string"
+                                            "start_latitude": {
+                                                "type": "number"
                                             },
-                                            "stopLatitude": {
-                                                "type": "string"
+                                            "start_longitude": {
+                                                "type": "number"
                                             },
-                                            "stopLongitude": {
-                                                "type": "string"
+                                            "start_time": {
+                                                "type": "number"
                                             },
-                                            "stopTime": {
-                                                "type": "string"
+                                            "trip_features": {
+                                                "items": {
+                                                    "feature_name": {
+                                                        "type": "string"
+                                                    },
+                                                    "feature_value": {
+                                                        "type": "string"
+                                                    },
+                                                    "id": {
+                                                        "type": "number"
+                                                    },
+                                                    "tenant_id": {
+                                                        "type": "string"
+                                                    },
+                                                    "trip_uuid": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "minItems": 0,
+                                                "type": "array"
                                             },
-                                            "tripID": {
+                                            "trip_id": {
                                                 "type": "string"
                                             }
                                         },
@@ -1248,67 +1816,209 @@ var schemas = `
                                     },
                                     "lastTrip": {
                                         "properties": {
-                                            "behaviorArray": {
+                                            "ctx_sub_trips": {
                                                 "items": {
-                                                    "behaviorName": {
-                                                        "type": "string"
+                                                    "avg_speed": {
+                                                        "type": "number"
                                                     },
-                                                    "contextFeatures": {
+                                                    "ctx_features": {
                                                         "items": {
-                                                            "category": {
+                                                            "behavior_id": {
                                                                 "type": "string"
                                                             },
-                                                            "name": {
+                                                            "context_category": {
+                                                                "type": "string"
+                                                            },
+                                                            "context_category_id": {
+                                                                "type": "number"
+                                                            },
+                                                            "context_id": {
+                                                                "type": "number"
+                                                            },
+                                                            "context_name": {
+                                                                "type": "string"
+                                                            },
+                                                            "id": {
+                                                                "type": "number"
+                                                            },
+                                                            "sub_trip_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "tenant_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "trip_id": {
                                                                 "type": "string"
                                                             }
                                                         },
                                                         "minItems": 0,
                                                         "type": "array"
                                                     },
-                                                    "startLatitude": {
+                                                    "driver_id": {
                                                         "type": "string"
                                                     },
-                                                    "startLongitude": {
+                                                    "driving_behavior_details": {
+                                                        "items": {
+                                                            "behavior_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "behavior_name": {
+                                                                "type": "string"
+                                                            },
+                                                            "driver_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "end_latitude": {
+                                                                "type": "number"
+                                                            },
+                                                            "end_longitude": {
+                                                                "type": "number"
+                                                            },
+                                                            "end_time": {
+                                                                "type": "number"
+                                                            },
+                                                            "generated_time": {
+                                                                "type": "number"
+                                                            },
+                                                            "id": {
+                                                                "type": "number"
+                                                            },
+                                                            "mo_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "start_latitude": {
+                                                                "type": "number"
+                                                            },
+                                                            "start_longitude": {
+                                                                "type": "number"
+                                                            },
+                                                            "start_time": {
+                                                                "type": "number"
+                                                            },
+                                                            "sub_trip_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "tenant_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "trip_id": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "minItems": 0,
+                                                        "type": "array"
+                                                    },
+                                                    "end_latitude": {
+                                                        "type": "number"
+                                                    },
+                                                    "end_longitude": {
+                                                        "type": "number"
+                                                    },
+                                                    "end_time": {
+                                                        "type": "number"
+                                                    },
+                                                    "id": {
+                                                        "properties": {
+                                                            "sub_trip_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "tenant_id": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "length": {
+                                                        "type": "number"
+                                                    },
+                                                    "mo_id": {
                                                         "type": "string"
                                                     },
-                                                    "startTime": {
+                                                    "start_latitude": {
+                                                        "type": "number"
+                                                    },
+                                                    "start_longitude": {
+                                                        "type": "number"
+                                                    },
+                                                    "start_time": {
+                                                        "type": "number"
+                                                    },
+                                                    "trip_id": {
                                                         "type": "string"
                                                     },
-                                                    "stopLatitude": {
-                                                        "type": "string"
-                                                    },
-                                                    "stopLongitude": {
-                                                        "type": "string"
-                                                    },
-                                                    "stopTime": {
+                                                    "trip_uuid": {
                                                         "type": "string"
                                                     }
                                                 },
                                                 "minItems": 0,
                                                 "type": "array"
                                             },
-                                            "licenceNumber": {
+                                            "driver_id": {
                                                 "type": "string"
                                             },
-                                            "startLatitude": {
+                                            "end_altitude": {
+                                                "type": "number"
+                                            },
+                                            "end_latitude": {
+                                                "type": "number"
+                                            },
+                                            "end_longitude": {
+                                                "type": "number"
+                                            },
+                                            "end_time": {
+                                                "type": "number"
+                                            },
+                                            "generated_time": {
+                                                "type": "number"
+                                            },
+                                            "id": {
+                                                "properties": {
+                                                    "tenant_id": {
+                                                        "type": "string"
+                                                    },
+                                                    "trip_uuid": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "mo_id": {
                                                 "type": "string"
                                             },
-                                            "startLongitude": {
-                                                "type": "string"
+                                            "start_altitude": {
+                                                "type": "number"
                                             },
-                                            "startTime": {
-                                                "type": "string"
+                                            "start_latitude": {
+                                                "type": "number"
                                             },
-                                            "stopLatitude": {
-                                                "type": "string"
+                                            "start_longitude": {
+                                                "type": "number"
                                             },
-                                            "stopLongitude": {
-                                                "type": "string"
+                                            "start_time": {
+                                                "type": "number"
                                             },
-                                            "stopTime": {
-                                                "type": "string"
+                                            "trip_features": {
+                                                "items": {
+                                                    "feature_name": {
+                                                        "type": "string"
+                                                    },
+                                                    "feature_value": {
+                                                        "type": "string"
+                                                    },
+                                                    "id": {
+                                                        "type": "number"
+                                                    },
+                                                    "tenant_id": {
+                                                        "type": "string"
+                                                    },
+                                                    "trip_uuid": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "minItems": 0,
+                                                "type": "array"
                                             },
-                                            "tripID": {
+                                            "trip_id": {
                                                 "type": "string"
                                             }
                                         },
@@ -1500,67 +2210,209 @@ var schemas = `
                                     },
                                     "lastTrip": {
                                         "properties": {
-                                            "behaviorArray": {
+                                            "ctx_sub_trips": {
                                                 "items": {
-                                                    "behaviorName": {
-                                                        "type": "string"
+                                                    "avg_speed": {
+                                                        "type": "number"
                                                     },
-                                                    "contextFeatures": {
+                                                    "ctx_features": {
                                                         "items": {
-                                                            "category": {
+                                                            "behavior_id": {
                                                                 "type": "string"
                                                             },
-                                                            "name": {
+                                                            "context_category": {
+                                                                "type": "string"
+                                                            },
+                                                            "context_category_id": {
+                                                                "type": "number"
+                                                            },
+                                                            "context_id": {
+                                                                "type": "number"
+                                                            },
+                                                            "context_name": {
+                                                                "type": "string"
+                                                            },
+                                                            "id": {
+                                                                "type": "number"
+                                                            },
+                                                            "sub_trip_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "tenant_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "trip_id": {
                                                                 "type": "string"
                                                             }
                                                         },
                                                         "minItems": 0,
                                                         "type": "array"
                                                     },
-                                                    "startLatitude": {
+                                                    "driver_id": {
                                                         "type": "string"
                                                     },
-                                                    "startLongitude": {
+                                                    "driving_behavior_details": {
+                                                        "items": {
+                                                            "behavior_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "behavior_name": {
+                                                                "type": "string"
+                                                            },
+                                                            "driver_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "end_latitude": {
+                                                                "type": "number"
+                                                            },
+                                                            "end_longitude": {
+                                                                "type": "number"
+                                                            },
+                                                            "end_time": {
+                                                                "type": "number"
+                                                            },
+                                                            "generated_time": {
+                                                                "type": "number"
+                                                            },
+                                                            "id": {
+                                                                "type": "number"
+                                                            },
+                                                            "mo_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "start_latitude": {
+                                                                "type": "number"
+                                                            },
+                                                            "start_longitude": {
+                                                                "type": "number"
+                                                            },
+                                                            "start_time": {
+                                                                "type": "number"
+                                                            },
+                                                            "sub_trip_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "tenant_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "trip_id": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "minItems": 0,
+                                                        "type": "array"
+                                                    },
+                                                    "end_latitude": {
+                                                        "type": "number"
+                                                    },
+                                                    "end_longitude": {
+                                                        "type": "number"
+                                                    },
+                                                    "end_time": {
+                                                        "type": "number"
+                                                    },
+                                                    "id": {
+                                                        "properties": {
+                                                            "sub_trip_id": {
+                                                                "type": "string"
+                                                            },
+                                                            "tenant_id": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "length": {
+                                                        "type": "number"
+                                                    },
+                                                    "mo_id": {
                                                         "type": "string"
                                                     },
-                                                    "startTime": {
+                                                    "start_latitude": {
+                                                        "type": "number"
+                                                    },
+                                                    "start_longitude": {
+                                                        "type": "number"
+                                                    },
+                                                    "start_time": {
+                                                        "type": "number"
+                                                    },
+                                                    "trip_id": {
                                                         "type": "string"
                                                     },
-                                                    "stopLatitude": {
-                                                        "type": "string"
-                                                    },
-                                                    "stopLongitude": {
-                                                        "type": "string"
-                                                    },
-                                                    "stopTime": {
+                                                    "trip_uuid": {
                                                         "type": "string"
                                                     }
                                                 },
                                                 "minItems": 0,
                                                 "type": "array"
                                             },
-                                            "licenceNumber": {
+                                            "driver_id": {
                                                 "type": "string"
                                             },
-                                            "startLatitude": {
+                                            "end_altitude": {
+                                                "type": "number"
+                                            },
+                                            "end_latitude": {
+                                                "type": "number"
+                                            },
+                                            "end_longitude": {
+                                                "type": "number"
+                                            },
+                                            "end_time": {
+                                                "type": "number"
+                                            },
+                                            "generated_time": {
+                                                "type": "number"
+                                            },
+                                            "id": {
+                                                "properties": {
+                                                    "tenant_id": {
+                                                        "type": "string"
+                                                    },
+                                                    "trip_uuid": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "mo_id": {
                                                 "type": "string"
                                             },
-                                            "startLongitude": {
-                                                "type": "string"
+                                            "start_altitude": {
+                                                "type": "number"
                                             },
-                                            "startTime": {
-                                                "type": "string"
+                                            "start_latitude": {
+                                                "type": "number"
                                             },
-                                            "stopLatitude": {
-                                                "type": "string"
+                                            "start_longitude": {
+                                                "type": "number"
                                             },
-                                            "stopLongitude": {
-                                                "type": "string"
+                                            "start_time": {
+                                                "type": "number"
                                             },
-                                            "stopTime": {
-                                                "type": "string"
+                                            "trip_features": {
+                                                "items": {
+                                                    "feature_name": {
+                                                        "type": "string"
+                                                    },
+                                                    "feature_value": {
+                                                        "type": "string"
+                                                    },
+                                                    "id": {
+                                                        "type": "number"
+                                                    },
+                                                    "tenant_id": {
+                                                        "type": "string"
+                                                    },
+                                                    "trip_uuid": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "minItems": 0,
+                                                "type": "array"
                                             },
-                                            "tripID": {
+                                            "trip_id": {
                                                 "type": "string"
                                             }
                                         },
@@ -1700,67 +2552,209 @@ var schemas = `
                         },
                         "lastTrip": {
                             "properties": {
-                                "behaviorArray": {
+                                "ctx_sub_trips": {
                                     "items": {
-                                        "behaviorName": {
-                                            "type": "string"
+                                        "avg_speed": {
+                                            "type": "number"
                                         },
-                                        "contextFeatures": {
+                                        "ctx_features": {
                                             "items": {
-                                                "category": {
+                                                "behavior_id": {
                                                     "type": "string"
                                                 },
-                                                "name": {
+                                                "context_category": {
+                                                    "type": "string"
+                                                },
+                                                "context_category_id": {
+                                                    "type": "number"
+                                                },
+                                                "context_id": {
+                                                    "type": "number"
+                                                },
+                                                "context_name": {
+                                                    "type": "string"
+                                                },
+                                                "id": {
+                                                    "type": "number"
+                                                },
+                                                "sub_trip_id": {
+                                                    "type": "string"
+                                                },
+                                                "tenant_id": {
+                                                    "type": "string"
+                                                },
+                                                "trip_id": {
                                                     "type": "string"
                                                 }
                                             },
                                             "minItems": 0,
                                             "type": "array"
                                         },
-                                        "startLatitude": {
+                                        "driver_id": {
                                             "type": "string"
                                         },
-                                        "startLongitude": {
+                                        "driving_behavior_details": {
+                                            "items": {
+                                                "behavior_id": {
+                                                    "type": "string"
+                                                },
+                                                "behavior_name": {
+                                                    "type": "string"
+                                                },
+                                                "driver_id": {
+                                                    "type": "string"
+                                                },
+                                                "end_latitude": {
+                                                    "type": "number"
+                                                },
+                                                "end_longitude": {
+                                                    "type": "number"
+                                                },
+                                                "end_time": {
+                                                    "type": "number"
+                                                },
+                                                "generated_time": {
+                                                    "type": "number"
+                                                },
+                                                "id": {
+                                                    "type": "number"
+                                                },
+                                                "mo_id": {
+                                                    "type": "string"
+                                                },
+                                                "start_latitude": {
+                                                    "type": "number"
+                                                },
+                                                "start_longitude": {
+                                                    "type": "number"
+                                                },
+                                                "start_time": {
+                                                    "type": "number"
+                                                },
+                                                "sub_trip_id": {
+                                                    "type": "string"
+                                                },
+                                                "tenant_id": {
+                                                    "type": "string"
+                                                },
+                                                "trip_id": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "minItems": 0,
+                                            "type": "array"
+                                        },
+                                        "end_latitude": {
+                                            "type": "number"
+                                        },
+                                        "end_longitude": {
+                                            "type": "number"
+                                        },
+                                        "end_time": {
+                                            "type": "number"
+                                        },
+                                        "id": {
+                                            "properties": {
+                                                "sub_trip_id": {
+                                                    "type": "string"
+                                                },
+                                                "tenant_id": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "length": {
+                                            "type": "number"
+                                        },
+                                        "mo_id": {
                                             "type": "string"
                                         },
-                                        "startTime": {
+                                        "start_latitude": {
+                                            "type": "number"
+                                        },
+                                        "start_longitude": {
+                                            "type": "number"
+                                        },
+                                        "start_time": {
+                                            "type": "number"
+                                        },
+                                        "trip_id": {
                                             "type": "string"
                                         },
-                                        "stopLatitude": {
-                                            "type": "string"
-                                        },
-                                        "stopLongitude": {
-                                            "type": "string"
-                                        },
-                                        "stopTime": {
+                                        "trip_uuid": {
                                             "type": "string"
                                         }
                                     },
                                     "minItems": 0,
                                     "type": "array"
                                 },
-                                "licenceNumber": {
+                                "driver_id": {
                                     "type": "string"
                                 },
-                                "startLatitude": {
+                                "end_altitude": {
+                                    "type": "number"
+                                },
+                                "end_latitude": {
+                                    "type": "number"
+                                },
+                                "end_longitude": {
+                                    "type": "number"
+                                },
+                                "end_time": {
+                                    "type": "number"
+                                },
+                                "generated_time": {
+                                    "type": "number"
+                                },
+                                "id": {
+                                    "properties": {
+                                        "tenant_id": {
+                                            "type": "string"
+                                        },
+                                        "trip_uuid": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "mo_id": {
                                     "type": "string"
                                 },
-                                "startLongitude": {
-                                    "type": "string"
+                                "start_altitude": {
+                                    "type": "number"
                                 },
-                                "startTime": {
-                                    "type": "string"
+                                "start_latitude": {
+                                    "type": "number"
                                 },
-                                "stopLatitude": {
-                                    "type": "string"
+                                "start_longitude": {
+                                    "type": "number"
                                 },
-                                "stopLongitude": {
-                                    "type": "string"
+                                "start_time": {
+                                    "type": "number"
                                 },
-                                "stopTime": {
-                                    "type": "string"
+                                "trip_features": {
+                                    "items": {
+                                        "feature_name": {
+                                            "type": "string"
+                                        },
+                                        "feature_value": {
+                                            "type": "string"
+                                        },
+                                        "id": {
+                                            "type": "number"
+                                        },
+                                        "tenant_id": {
+                                            "type": "string"
+                                        },
+                                        "trip_uuid": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "minItems": 0,
+                                    "type": "array"
                                 },
-                                "tripID": {
+                                "trip_id": {
                                     "type": "string"
                                 }
                             },
@@ -1933,67 +2927,209 @@ var schemas = `
                         },
                         "lastTrip": {
                             "properties": {
-                                "behaviorArray": {
+                                "ctx_sub_trips": {
                                     "items": {
-                                        "behaviorName": {
-                                            "type": "string"
+                                        "avg_speed": {
+                                            "type": "number"
                                         },
-                                        "contextFeatures": {
+                                        "ctx_features": {
                                             "items": {
-                                                "category": {
+                                                "behavior_id": {
                                                     "type": "string"
                                                 },
-                                                "name": {
+                                                "context_category": {
+                                                    "type": "string"
+                                                },
+                                                "context_category_id": {
+                                                    "type": "number"
+                                                },
+                                                "context_id": {
+                                                    "type": "number"
+                                                },
+                                                "context_name": {
+                                                    "type": "string"
+                                                },
+                                                "id": {
+                                                    "type": "number"
+                                                },
+                                                "sub_trip_id": {
+                                                    "type": "string"
+                                                },
+                                                "tenant_id": {
+                                                    "type": "string"
+                                                },
+                                                "trip_id": {
                                                     "type": "string"
                                                 }
                                             },
                                             "minItems": 0,
                                             "type": "array"
                                         },
-                                        "startLatitude": {
+                                        "driver_id": {
                                             "type": "string"
                                         },
-                                        "startLongitude": {
+                                        "driving_behavior_details": {
+                                            "items": {
+                                                "behavior_id": {
+                                                    "type": "string"
+                                                },
+                                                "behavior_name": {
+                                                    "type": "string"
+                                                },
+                                                "driver_id": {
+                                                    "type": "string"
+                                                },
+                                                "end_latitude": {
+                                                    "type": "number"
+                                                },
+                                                "end_longitude": {
+                                                    "type": "number"
+                                                },
+                                                "end_time": {
+                                                    "type": "number"
+                                                },
+                                                "generated_time": {
+                                                    "type": "number"
+                                                },
+                                                "id": {
+                                                    "type": "number"
+                                                },
+                                                "mo_id": {
+                                                    "type": "string"
+                                                },
+                                                "start_latitude": {
+                                                    "type": "number"
+                                                },
+                                                "start_longitude": {
+                                                    "type": "number"
+                                                },
+                                                "start_time": {
+                                                    "type": "number"
+                                                },
+                                                "sub_trip_id": {
+                                                    "type": "string"
+                                                },
+                                                "tenant_id": {
+                                                    "type": "string"
+                                                },
+                                                "trip_id": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "minItems": 0,
+                                            "type": "array"
+                                        },
+                                        "end_latitude": {
+                                            "type": "number"
+                                        },
+                                        "end_longitude": {
+                                            "type": "number"
+                                        },
+                                        "end_time": {
+                                            "type": "number"
+                                        },
+                                        "id": {
+                                            "properties": {
+                                                "sub_trip_id": {
+                                                    "type": "string"
+                                                },
+                                                "tenant_id": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "length": {
+                                            "type": "number"
+                                        },
+                                        "mo_id": {
                                             "type": "string"
                                         },
-                                        "startTime": {
+                                        "start_latitude": {
+                                            "type": "number"
+                                        },
+                                        "start_longitude": {
+                                            "type": "number"
+                                        },
+                                        "start_time": {
+                                            "type": "number"
+                                        },
+                                        "trip_id": {
                                             "type": "string"
                                         },
-                                        "stopLatitude": {
-                                            "type": "string"
-                                        },
-                                        "stopLongitude": {
-                                            "type": "string"
-                                        },
-                                        "stopTime": {
+                                        "trip_uuid": {
                                             "type": "string"
                                         }
                                     },
                                     "minItems": 0,
                                     "type": "array"
                                 },
-                                "licenceNumber": {
+                                "driver_id": {
                                     "type": "string"
                                 },
-                                "startLatitude": {
+                                "end_altitude": {
+                                    "type": "number"
+                                },
+                                "end_latitude": {
+                                    "type": "number"
+                                },
+                                "end_longitude": {
+                                    "type": "number"
+                                },
+                                "end_time": {
+                                    "type": "number"
+                                },
+                                "generated_time": {
+                                    "type": "number"
+                                },
+                                "id": {
+                                    "properties": {
+                                        "tenant_id": {
+                                            "type": "string"
+                                        },
+                                        "trip_uuid": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "mo_id": {
                                     "type": "string"
                                 },
-                                "startLongitude": {
-                                    "type": "string"
+                                "start_altitude": {
+                                    "type": "number"
                                 },
-                                "startTime": {
-                                    "type": "string"
+                                "start_latitude": {
+                                    "type": "number"
                                 },
-                                "stopLatitude": {
-                                    "type": "string"
+                                "start_longitude": {
+                                    "type": "number"
                                 },
-                                "stopLongitude": {
-                                    "type": "string"
+                                "start_time": {
+                                    "type": "number"
                                 },
-                                "stopTime": {
-                                    "type": "string"
+                                "trip_features": {
+                                    "items": {
+                                        "feature_name": {
+                                            "type": "string"
+                                        },
+                                        "feature_value": {
+                                            "type": "string"
+                                        },
+                                        "id": {
+                                            "type": "number"
+                                        },
+                                        "tenant_id": {
+                                            "type": "string"
+                                        },
+                                        "trip_uuid": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "minItems": 0,
+                                    "type": "array"
                                 },
-                                "tripID": {
+                                "trip_id": {
                                     "type": "string"
                                 }
                             },

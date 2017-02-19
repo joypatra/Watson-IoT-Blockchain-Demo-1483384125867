@@ -955,72 +955,214 @@
        		}
         },
         "trip": {
-        	"type": "object",
+            "type": "object",
             "properties": {
-         		"tripID": {
-        			"type": "string"
-        		},
-        		"licenceNumber": {
-        			"type": "string"
-        		},
-        		"startTime": {
-        			"type": "string"
-       			},
-        		"startLatitude": {
-        			"type": "string"
-        		},
-         		"startLongitude": {
-        			"type": "string"
-        		},
-        		"stopTime": {
-        			"type": "string"
-       			},
-         		"stopLatitude": {
-       				"type": "string"
-       			},
-         		"stopLongitude": {
-       				"type": "string"
-       			},
-        		"behaviorArray": {
-        			"type": "array",
-        			"items": {
-       					"behaviorName": {
-       						"type": "string"
-       					},
-						"startTime": {
-        					"type": "string"
-        				},
-         				"startLatitude": {
-        					"type": "string"
-        				},
-         				"startLongitude": {
-       						"type": "string"
-       					},
-        				"stopTime": {
-        					"type": "string"
-        				},
-         				"stopLatitude": {
-        					"type": "string"
-        				},
-         				"stopLongitude": {
-       						"type": "string"
-       					},
-       					"contextFeatures": {
-       						"type": "array",
-        					"items": {
-        						"category": {
-        							"type": "string"
-        						},
-        						"name": {
-        							"type": "string"
-       							}
-       						},
-       						"minItems": 0
-       					}
-       				},
-       				"minItems": 0
-       			}
-       		}
+                "id": {
+                    "type": "object",
+                    "properties": {
+                        "trip_uuid": {
+                            "type": "string"
+                        },
+                        "tenant_id": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "trip_id": {
+                    "type": "string"
+                },
+                "start_altitude": {
+                    "type": "number"
+                },
+                "start_latitude": {
+                    "type": "number"
+                },
+                "start_longitude": {
+                    "type": "number"
+                },
+                "start_time": {
+                    "type": "number"
+                },
+                "end_altitude": {
+                    "type": "number"
+                },
+                "end_latitude": {
+                    "type": "number"
+                },
+                "end_longitude": {
+                    "type": "number"
+                },
+                "end_time": {
+                    "type": "number"
+                },
+                "generated_time": {
+                    "type": "number"
+                },
+                "mo_id": {
+                    "type": "string"
+                },
+                "driver_id": {
+                    "type": "string"
+                },
+                "ctx_sub_trips": {
+                    "type": "array",
+                    "items": {
+                        "id": {
+                            "type": "object",
+                            "properties": {
+                                "sub_trip_id": {
+                                    "type": "string"
+                                },
+                                "tenant_id": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "trip_id": {
+                            "type": "string"
+                        },
+                        "trip_uuid": {
+                            "type": "string"
+                        },
+                        "length": {
+                            "type": "number"
+                        },
+                        "avg_speed": {
+                            "type": "number"
+                        },
+                        "start_time": {
+                            "type": "number"
+                        },
+                        "start_latitude": {
+                            "type": "number"
+                        },
+                        "start_longitude": {
+                            "type": "number"
+                        },
+                        "end_time": {
+                            "type": "number"
+                        },
+                        "end_latitude": {
+                            "type": "number"
+                        },
+                        "end_longitude": {
+                            "type": "number"
+                        },
+                        "mo_id": {
+                            "type": "string"
+                        },
+                        "driver_id": {
+                            "type": "string"
+                        },
+                        "ctx_features": {
+                            "type": "array",
+                            "items": {
+                                "id": {
+                                    "type": "number"
+                                },
+                                "context_category": {
+                                    "type": "string"
+                                },
+                                "context_category_id": {
+                                    "type": "number"
+                                },
+                                "context_id": {
+                                    "type": "number"
+                                },
+                                "context_name": {
+                                    "type": "string"
+                                },
+                                "sub_trip_id": {
+                                    "type": "string"
+                                },
+                                "tenant_id": {
+                                    "type": "string"
+                                },
+                                "trip_id": {
+                                    "type": "string"
+                                },
+                                "behavior_id": {
+                                    "type": "string"
+                                }
+                            },
+                            "minItems": 0
+                        },
+                        "driving_behavior_details": {
+                            "type": "array",
+                            "items": {
+                                "id": {
+                                    "type": "number"
+                                },
+                                "behavior_name": {
+                                    "type": "string"
+                                },
+                                "start_time": {
+                                    "type": "number"
+                                },
+                                "start_latitude": {
+                                    "type": "number"
+                                },
+                                "start_longitude": {
+                                    "type": "number"
+                                },
+                                "end_time": {
+                                    "type": "number"
+                                },
+                                "end_latitude": {
+                                    "type": "number"
+                                },
+                                "end_longitude": {
+                                    "type": "number"
+                                },
+                                "generated_time": {
+                                    "type": "number"
+                                },
+                                "mo_id": {
+                                    "type": "string"
+                                },
+                                "driver_id": {
+                                    "type": "string"
+                                },
+                                "sub_trip_id": {
+                                    "type": "string"
+                                },
+                                "tenant_id": {
+                                    "type": "string"
+                                },
+                                "trip_id": {
+                                    "type": "string"
+                                },
+                                "behavior_id": {
+                                    "type": "string"
+                                }
+                            },
+                            "minItems": 0
+                        }
+                    },
+                    "minItems": 0
+                },
+                "trip_features": {
+                    "type": "array",
+                    "items": {
+                        "id": {
+                            "type": "number"
+                        },
+                        "feature_name": {
+                            "type": "string"
+                        },
+                        "feature_value": {
+                            "type": "string"
+                        },
+                        "tenant_id": {
+                            "type": "string"
+                        },
+                        "trip_uuid": {
+                            "type": "string"
+                        }
+                    },
+                    "minItems": 0
+                }
+            }
         },
         "stateArray": {
             "type": "array",
